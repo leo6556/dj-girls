@@ -19,3 +19,10 @@ class Post(models.Model):
     def publish(self):
         self.published = timezone.now()
         self.save()
+
+class liki(models.Model):
+
+    name = models.CharField(max_length=90)
+
+    def __str__(self):
+        return self.name
